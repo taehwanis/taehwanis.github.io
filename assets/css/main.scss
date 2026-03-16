@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* ---- Masthead flex direction fix ---- */
 .masthead {
-  border-bottom: none !important;
+  border-bottom: 1px solid #2a2e42 !important;
   background: #16161e !important;
 }
 
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* Sidebar overlay mode — completely out of document flow */
+/* Sidebar overlay — hidden by default via CSS, JS toggles visibility */
 .sidebar {
   position: fixed !important;
   float: none !important;
@@ -102,14 +102,14 @@ h1, h2, h3, h4, h5, h6,
   z-index: 50;
   padding: 20px 16px;
   overflow-y: auto;
-  transform: translateX(0);
+  transform: translateX(-100%);
   transition: transform 0.25s ease;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   opacity: 1 !important;
 }
 
-.sidebar.sidebar--collapsed {
-  transform: translateX(-100%) !important;
+.sidebar.sidebar--open {
+  transform: translateX(0) !important;
 }
 
 /* Content always centered — sidebar is overlay, doesn't affect layout */

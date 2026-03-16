@@ -52,15 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
     block.appendChild(btn);
   });
 
-  // Sidebar overlay toggle
+  // Sidebar overlay toggle — default hidden via CSS, toggle adds sidebar--open
   var sidebar = document.querySelector('.sidebar');
   if (sidebar) {
-    sidebar.classList.add('sidebar--collapsed');
-
     function toggleSidebar() {
-      sidebar.classList.toggle('sidebar--collapsed');
+      sidebar.classList.toggle('sidebar--open');
       toggleBtn.classList.toggle('active');
-      toggleBtn.textContent = sidebar.classList.contains('sidebar--collapsed') ? '[ whoami ]' : '[ close ]';
+      toggleBtn.textContent = sidebar.classList.contains('sidebar--open') ? '[ close ]' : '[ whoami ]';
     }
 
     // Toggle button
