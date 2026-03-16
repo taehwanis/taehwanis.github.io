@@ -51,4 +51,26 @@ document.addEventListener('DOMContentLoaded', function() {
     block.appendChild(btn);
   });
 });
+
+  // Sidebar toggle
+  var sidebar = document.querySelector('.sidebar');
+  var main = document.getElementById('main');
+  if (sidebar && main) {
+    // Start collapsed
+    sidebar.classList.add('sidebar--collapsed');
+    main.classList.add('sidebar-hidden');
+
+    var toggleBtn = document.createElement('button');
+    toggleBtn.className = 'sidebar-toggle-btn';
+    toggleBtn.textContent = '[ whoami ]';
+    toggleBtn.title = 'Toggle profile sidebar';
+    toggleBtn.addEventListener('click', function() {
+      sidebar.classList.toggle('sidebar--collapsed');
+      main.classList.toggle('sidebar-hidden');
+      toggleBtn.classList.toggle('active');
+      toggleBtn.textContent = sidebar.classList.contains('sidebar--collapsed') ? '[ whoami ]' : '[ close ]';
+    });
+    document.body.appendChild(toggleBtn);
+  }
+});
 </script>
