@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5, h6,
   gap: 8px;
   padding: 8px 16px;
   background: #16161e;
-  border-bottom: 1px solid #2a2e42;
+  border-bottom: none;
+  margin-bottom: 4px;
 }
 
 .terminal-dot {
@@ -495,9 +496,15 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-.archive__item-title a::before {
-  content: '> ' !important;
-  color: #f7768e !important;
+.archive__item-title {
+  display: flex;
+  align-items: baseline;
+
+  a::before {
+    content: '> ' !important;
+    color: #f7768e !important;
+    white-space: pre;
+  }
 }
 
 .archive__subtitle {
@@ -610,6 +617,14 @@ h1, h2, h3, h4, h5, h6,
 .author__urls.social-icons {
   li {
     font-family: 'Fira Code', monospace;
+  }
+
+  a {
+    color: #a9b1d6 !important;
+  }
+
+  i {
+    color: #7aa2f7 !important;
   }
 }
 
