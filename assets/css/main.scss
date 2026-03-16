@@ -34,6 +34,9 @@ h1, h2, h3, h4, h5, h6,
 .masthead {
   border-bottom: 1px solid #2a2e42 !important;
   background: #16161e !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 20;
 }
 
 .masthead__inner-wrap {
