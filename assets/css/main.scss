@@ -462,10 +462,63 @@ h1, h2, h3, h4, h5, h6,
 /* ---- Page title prompt style ---- */
 .page__title {
   color: #c0caf5;
+}
 
+/* Post detail: prompt before title */
+.page > .page__inner-wrap > header > .page__title {
   &::before {
-    content: '$ cat ';
-    color: #9ece6a;
+    content: '> ';
+    color: #f7768e;
     font-weight: 400;
   }
+}
+
+/* ---- Terminal glow effects ---- */
+.site-title {
+  text-shadow: 0 0 10px rgba(158, 206, 106, 0.3);
+}
+
+.terminal-dot--red { box-shadow: 0 0 4px rgba(247, 118, 142, 0.4); }
+.terminal-dot--yellow { box-shadow: 0 0 4px rgba(224, 175, 104, 0.4); }
+.terminal-dot--green { box-shadow: 0 0 4px rgba(158, 206, 106, 0.4); }
+
+/* ---- Archive list terminal style ---- */
+.archive__item {
+  border-left: 2px solid transparent;
+  padding-left: 12px;
+  margin-left: -12px;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-left-color: #7aa2f7;
+    background: rgba(36, 40, 59, 0.6);
+  }
+}
+
+.archive__item-title a::before {
+  content: '> ' !important;
+  color: #f7768e !important;
+}
+
+.archive__subtitle {
+  display: none;
+}
+
+/* ---- Sidebar terminal style ---- */
+.author__name {
+  text-shadow: 0 0 8px rgba(158, 206, 106, 0.3);
+}
+
+.author__bio::before {
+  content: '// ' !important;
+}
+
+/* ---- Terminal prompt line ---- */
+.terminal-prompt {
+  text-shadow: 0 0 6px rgba(158, 206, 106, 0.15);
+}
+
+/* ---- Link underline glow on hover ---- */
+.archive__item-title a:hover {
+  text-shadow: 0 0 8px rgba(122, 162, 247, 0.3);
 }

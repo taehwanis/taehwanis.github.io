@@ -4,7 +4,10 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<div class="terminal-prompt" style="color:#9ece6a;font-family:'Fira Code',monospace;font-size:0.85em;margin-bottom:6px;">
+  <span style="color:#9ece6a;">taehwan</span><span style="color:#565f89;">@</span><span style="color:#7aa2f7;">~/blog</span> <span style="color:#565f89;">$</span> <span style="color:#c0caf5;">ls posts/ --recent</span>
+</div>
+<div style="border-bottom:1px solid #2a2e42;margin-bottom:16px;"></div>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -17,6 +20,10 @@ layout: archive
   {% for post in posts %}
     {% include archive-single.html type=entries_layout %}
   {% endfor %}
+</div>
+
+<div class="terminal-cursor-line" style="margin-top:24px;font-family:'Fira Code',monospace;font-size:0.85em;">
+  <span style="color:#9ece6a;">taehwan</span><span style="color:#565f89;">@</span><span style="color:#7aa2f7;">~/blog</span> <span style="color:#565f89;">$</span> <span class="terminal-cursor" style="color:#c0caf5;animation:cursor-blink 1s step-end infinite;">█</span>
 </div>
 
 {% include paginator.html %}
