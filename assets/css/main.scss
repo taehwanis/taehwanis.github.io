@@ -37,17 +37,12 @@ h1, h2, h3, h4, h5, h6,
   gap: 8px;
   padding: 8px 16px;
   background: #16161e;
-  border-bottom: none;
-  margin-bottom: 0;
+  border-bottom: 1px solid #2a2e42;
+  margin-bottom: 12px;
 }
 
-.masthead__inner-wrap {
-  padding-top: 0 !important;
-}
-
-.masthead__menu {
-  padding-top: 10px !important;
-  padding-bottom: 4px;
+.greedy-nav {
+  margin-top: 4px;
 }
 
 .terminal-dot {
