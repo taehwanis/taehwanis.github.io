@@ -86,9 +86,10 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* Sidebar overlay mode */
+/* Sidebar overlay mode — completely out of document flow */
 .sidebar {
   position: fixed !important;
+  float: none !important;
   top: 0;
   left: 0;
   width: 240px;
@@ -101,19 +102,22 @@ h1, h2, h3, h4, h5, h6,
   transform: translateX(0);
   transition: transform 0.25s ease;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+  opacity: 1 !important;
 }
 
 .sidebar.sidebar--collapsed {
   transform: translateX(-100%) !important;
 }
 
-/* Content always full width */
-#main .archive {
+/* Content always centered — sidebar is overlay, doesn't affect layout */
+#main .archive,
+#main .page {
   float: none !important;
   width: 100% !important;
   max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px !important;
+  margin: 0 auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 /* No backdrop — sidebar floats over content without blocking */
