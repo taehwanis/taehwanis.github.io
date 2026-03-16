@@ -30,6 +30,12 @@ h1, h2, h3, h4, h5, h6,
   color: #c0caf5;
 }
 
+/* ---- Masthead flex direction fix ---- */
+.masthead__inner-wrap {
+  flex-direction: column !important;
+  padding: 0 !important;
+}
+
 /* ---- Terminal Titlebar ---- */
 .terminal-titlebar {
   display: flex;
@@ -38,11 +44,11 @@ h1, h2, h3, h4, h5, h6,
   padding: 8px 16px;
   background: #16161e;
   border-bottom: 1px solid #2a2e42;
-  margin-bottom: 12px;
+  width: 100%;
 }
 
-.greedy-nav {
-  margin-top: 4px;
+.masthead__menu {
+  padding: 10px 1em 6px !important;
 }
 
 .terminal-dot {
