@@ -32,11 +32,15 @@ layout: archive
       <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
         <h2 class="archive__subtitle">{{ tag[0] }}</h2>
         <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
+          {% for post in tag.last limit:5 %}
             {% include archive-single.html type=entries_layout %}
           {% endfor %}
+          {% if tag[1].size > 5 %}
+            <p style="color:#565f89;font-family:'Fira Code',monospace;font-size:0.8em;padding:8px 0;">
+              // ... and {{ tag[1].size | minus: 5 }} more posts
+            </p>
+          {% endif %}
         </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </section>
     {% endif %}
   {% endfor %}
