@@ -38,7 +38,11 @@ h1, h2, h3, h4, h5, h6,
   padding: 8px 16px;
   background: #16161e;
   border-bottom: none;
-  margin-bottom: 4px;
+  margin-bottom: 0;
+}
+
+.masthead__menu {
+  padding-top: 8px;
 }
 
 .terminal-dot {
@@ -622,10 +626,18 @@ h1, h2, h3, h4, h5, h6,
   a {
     color: #a9b1d6 !important;
   }
+}
 
-  i {
-    color: #7aa2f7 !important;
-  }
+/* Sidebar icons — force color */
+.sidebar .author__urls i.fas,
+.sidebar .author__urls i.fab,
+.sidebar .author__urls i.far,
+.sidebar .author__urls .social-icons i {
+  color: #7aa2f7 !important;
+}
+
+.sidebar .fa-map-marker-alt {
+  color: #e0af68 !important;
 }
 
 /* ---- Mobile neofetch responsive ---- */
