@@ -1,29 +1,65 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
-
-<div class="terminal-prompt" style="color:#9ece6a;font-family:'Fira Code',monospace;font-size:0.85em;margin-bottom:6px;">
-  <span style="color:#9ece6a;">taehwan</span><span style="color:#565f89;">@</span><span style="color:#7aa2f7;">~/blog</span> <span style="color:#565f89;">$</span> <span style="color:#c0caf5;">ls posts/ --recent</span>
-</div>
-<div style="border-bottom:1px solid #2a2e42;margin-bottom:16px;"></div>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
+<div id="main" role="main">
+  {% include sidebar.html %}
 
-<div class="terminal-cursor-line" style="margin-top:24px;font-family:'Fira Code',monospace;font-size:0.85em;">
-  <span style="color:#9ece6a;">taehwan</span><span style="color:#565f89;">@</span><span style="color:#7aa2f7;">~/blog</span> <span style="color:#565f89;">$</span> <span class="terminal-cursor" style="color:#c0caf5;animation:cursor-blink 1s step-end infinite;">█</span>
-</div>
+  <div class="archive">
 
-{% include paginator.html %}
+    <!-- Terminal welcome section -->
+    <div class="terminal-welcome">
+      <div class="terminal-line"><span class="t-green">taehwan</span><span class="t-muted">@</span><span class="t-blue">blog</span> <span class="t-muted">$</span> <span class="t-bright">neofetch</span></div>
+      <div class="terminal-neofetch">
+        <pre class="terminal-ascii">
+  _____         _
+ |_   _|_ _ ___| |__
+   | |/ _` / _ \ '_ \
+   | | (_| |  __/ | | |
+   |_|\__,_|\___|_| |_|</pre>
+        <div class="terminal-info">
+          <div><span class="t-blue">OS</span><span class="t-muted">:</span> <span class="t-text">Developer Blog v2.0</span></div>
+          <div><span class="t-blue">Host</span><span class="t-muted">:</span> <span class="t-text">GitHub Pages</span></div>
+          <div><span class="t-blue">Shell</span><span class="t-muted">:</span> <span class="t-text">Jekyll + Minimal Mistakes</span></div>
+          <div><span class="t-blue">Theme</span><span class="t-muted">:</span> <span class="t-text">Tokyo Night [dark]</span></div>
+          <div><span class="t-blue">Lang</span><span class="t-muted">:</span> <span class="t-text">Java · Python · JavaScript</span></div>
+          <div><span class="t-blue">Posts</span><span class="t-muted">:</span> <span class="t-text">{{ site.posts.size }} articles</span></div>
+          <div class="terminal-colors">
+            <span style="background:#f7768e;">  </span><span style="background:#ff9e64;">  </span><span style="background:#e0af68;">  </span><span style="background:#9ece6a;">  </span><span style="background:#7dcfff;">  </span><span style="background:#7aa2f7;">  </span><span style="background:#bb9af7;">  </span><span style="background:#c0caf5;">  </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post list prompt -->
+    <div class="terminal-line" style="margin-top:28px;">
+      <span class="t-green">taehwan</span><span class="t-muted">@</span><span class="t-blue">~/posts</span> <span class="t-muted">$</span> <span class="t-bright">ls --recent --format=detailed</span>
+    </div>
+    <div style="border-bottom:1px solid #2a2e42;margin:8px 0 16px;"></div>
+
+    {% if paginator %}
+      {% assign posts = paginator.posts %}
+    {% else %}
+      {% assign posts = site.posts %}
+    {% endif %}
+
+    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    <div class="entries-{{ entries_layout }}">
+      {% for post in posts %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+
+    <!-- Bottom cursor -->
+    <div class="terminal-line" style="margin-top:24px;">
+      <span class="t-green">taehwan</span><span class="t-muted">@</span><span class="t-blue">~/posts</span> <span class="t-muted">$</span> <span class="terminal-cursor">█</span>
+    </div>
+
+    {% include paginator.html %}
+
+  </div>
+</div>

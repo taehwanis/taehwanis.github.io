@@ -522,3 +522,113 @@ h1, h2, h3, h4, h5, h6,
 .archive__item-title a:hover {
   text-shadow: 0 0 8px rgba(122, 162, 247, 0.3);
 }
+
+/* ---- Terminal welcome (neofetch) ---- */
+.terminal-welcome {
+  background: #16161e;
+  border: 1px solid #2a2e42;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 8px;
+}
+
+.terminal-neofetch {
+  display: flex;
+  gap: 28px;
+  margin-top: 12px;
+  align-items: flex-start;
+}
+
+.terminal-ascii {
+  color: #7aa2f7;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.3;
+  margin: 0;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  text-shadow: 0 0 12px rgba(122, 162, 247, 0.3);
+  flex-shrink: 0;
+}
+
+.terminal-info {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.terminal-colors {
+  margin-top: 8px;
+
+  span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    margin-right: 3px;
+  }
+}
+
+/* Terminal text colors */
+.t-green { color: #9ece6a; }
+.t-blue { color: #7aa2f7; }
+.t-red { color: #f7768e; }
+.t-yellow { color: #e0af68; }
+.t-muted { color: #565f89; }
+.t-bright { color: #c0caf5; }
+.t-text { color: #a9b1d6; }
+.t-purple { color: #bb9af7; }
+
+.terminal-line {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85em;
+}
+
+.terminal-cursor {
+  color: #c0caf5;
+  animation: cursor-blink 1s step-end infinite;
+}
+
+/* ---- Remove duplicate cursor from site-title ---- */
+.site-title::after {
+  content: '' !important;
+  display: none !important;
+}
+
+/* ---- Sidebar enhancements ---- */
+.author__avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.sidebar .author__content {
+  text-align: center;
+}
+
+.author__urls.social-icons {
+  li {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* ---- Mobile neofetch responsive ---- */
+@media (max-width: 600px) {
+  .terminal-neofetch {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .terminal-ascii {
+    font-size: 10px;
+  }
+
+  .terminal-info {
+    font-size: 12px;
+  }
+
+  .terminal-welcome {
+    padding: 14px 16px;
+  }
+}
