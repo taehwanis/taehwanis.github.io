@@ -61,23 +61,23 @@ h1, h2, h3, h4, h5, h6,
 
 /* ---- Sidebar toggle ---- */
 .sidebar-toggle-btn {
-  background: none;
+  background: #24283b;
   border: 1px solid #2a2e42;
   border-radius: 4px;
-  color: #565f89;
+  color: #7aa2f7;
   font-family: 'Fira Code', monospace;
-  font-size: 12px;
-  padding: 3px 10px;
+  font-size: 13px;
+  padding: 6px 14px;
   cursor: pointer;
-  position: fixed;
-  left: 10px;
-  top: 90px;
   z-index: 30;
   transition: all 0.2s;
+  position: static;
+  display: inline-block;
 
   &:hover {
     color: #c0caf5;
     border-color: #7aa2f7;
+    background: #2a2e42;
   }
 
   &.active {
@@ -95,7 +95,9 @@ h1, h2, h3, h4, h5, h6,
   .archive {
     float: none !important;
     width: 100% !important;
-    padding-left: 0 !important;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px !important;
   }
 }
 
@@ -124,7 +126,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .greedy-nav {
-  background: #1a1b26 !important;
+  background: #16161e !important;
+  display: flex !important;
+  align-items: center !important;
 
   a {
     color: #9ece6a !important;

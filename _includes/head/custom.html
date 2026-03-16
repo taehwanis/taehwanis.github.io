@@ -69,7 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleBtn.classList.toggle('active');
       toggleBtn.textContent = sidebar.classList.contains('sidebar--collapsed') ? '[ whoami ]' : '[ close ]';
     });
-    document.body.appendChild(toggleBtn);
+    var nav = document.querySelector('.greedy-nav');
+    if (nav) {
+      nav.insertBefore(toggleBtn, nav.querySelector('.visible-links'));
+    } else {
+      document.body.appendChild(toggleBtn);
+    }
   }
 });
 </script>
