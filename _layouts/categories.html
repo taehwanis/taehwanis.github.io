@@ -35,12 +35,19 @@ layout: archive
           {% for post in category.last limit:5 %}
             {% include archive-single.html type=entries_layout %}
           {% endfor %}
-          {% if category[1].size > 5 %}
-            <p style="color:#565f89;font-family:'Fira Code',monospace;font-size:0.8em;padding:8px 0;">
-              // ... and {{ category[1].size | minus: 5 }} more posts
-            </p>
-          {% endif %}
         </div>
+        {% if category[1].size > 5 %}
+          <div class="taxonomy__more-wrap" style="display:none;">
+            <div class="entries-{{ entries_layout }}">
+              {% for post in category.last offset:5 %}
+                {% include archive-single.html type=entries_layout %}
+              {% endfor %}
+            </div>
+          </div>
+          <button class="taxonomy__more-btn" onclick="var wrap=this.previousElementSibling;if(wrap.style.display==='none'){wrap.style.display='block';this.textContent='[ collapse ]';}else{wrap.style.display='none';this.textContent='// ... and {{ category[1].size | minus: 5 }} more posts [ expand ]';}">
+            // ... and {{ category[1].size | minus: 5 }} more posts [ expand ]
+          </button>
+        {% endif %}
       </section>
     {% endif %}
   {% endfor %}

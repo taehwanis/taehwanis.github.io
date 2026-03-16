@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6,
   background: #16161e !important;
   border-right: 1px solid #2a2e42;
   z-index: 15;
-  padding: 90px 16px 20px !important;
+  padding: 20px 16px 20px !important;
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform 0.25s ease;
@@ -656,14 +656,29 @@ h2.archive__item-title {
 }
 
 .terminal-colors {
-  margin-top: 8px;
+  margin-top: 10px;
 
   span {
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 12px;
     border-radius: 2px;
-    margin-right: 3px;
+    margin-right: 2px;
+  }
+}
+
+/* Taxonomy expand button */
+.taxonomy__more-btn {
+  background: none;
+  border: none;
+  color: #565f89;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: 8px 0;
+
+  &:hover {
+    color: #7aa2f7;
   }
 }
 
