@@ -91,16 +91,16 @@ h1, h2, h3, h4, h5, h6,
   position: fixed !important;
   top: 0;
   left: 0;
-  width: 280px;
+  width: 240px;
   height: 100vh;
   background: #16161e;
   border-right: 1px solid #2a2e42;
   z-index: 50;
-  padding: 80px 20px 20px;
+  padding: 70px 16px 20px;
   overflow-y: auto;
   transform: translateX(0);
   transition: transform 0.25s ease;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .sidebar.sidebar--collapsed {
