@@ -57,14 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (sidebar) {
     sidebar.classList.add('sidebar--collapsed');
 
-    // Backdrop
-    var backdrop = document.createElement('div');
-    backdrop.className = 'sidebar-backdrop';
-    document.body.appendChild(backdrop);
-
     function toggleSidebar() {
       sidebar.classList.toggle('sidebar--collapsed');
-      backdrop.classList.toggle('visible');
       toggleBtn.classList.toggle('active');
       toggleBtn.textContent = sidebar.classList.contains('sidebar--collapsed') ? '[ whoami ]' : '[ close ]';
     }
@@ -80,8 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
       nav.insertBefore(toggleBtn, nav.querySelector('.visible-links'));
     }
 
-    // Close on backdrop click
-    backdrop.addEventListener('click', toggleSidebar);
   }
 });
 </script>
