@@ -30,6 +30,7 @@ figure.highlight:hover .code-copy-btn { opacity: 1; }
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Code copy buttons
   document.querySelectorAll('div.highlight, figure.highlight').forEach(function(block) {
     block.style.position = 'relative';
     var btn = document.createElement('button');
@@ -50,13 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     block.appendChild(btn);
   });
-});
 
   // Sidebar toggle
   var sidebar = document.querySelector('.sidebar');
   var main = document.getElementById('main');
   if (sidebar && main) {
-    // Start collapsed
     sidebar.classList.add('sidebar--collapsed');
     main.classList.add('sidebar-hidden');
 
