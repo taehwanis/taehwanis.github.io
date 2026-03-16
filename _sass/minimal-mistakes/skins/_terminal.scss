@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Terminal skin (Hacker Terminal - Tokyo Night inspired)
+   ========================================================================== */
+
+/* Colors - Tokyo Night palette */
+$background-color           : #1a1b26 !default;
+$body-color                 : #1a1b26 !default;
+$text-color                 : #a9b1d6 !default;
+$muted-text-color           : #565f89 !default;
+$border-color               : #2a2e42 !default;
+$form-background-color      : #24283b !default;
+$footer-background-color    : #16161e !default;
+
+$primary-color              : #7aa2f7 !default;
+$success-color              : #9ece6a !default;
+$warning-color              : #e0af68 !default;
+$danger-color               : #f7768e !default;
+$info-color                 : #7dcfff !default;
+
+/* links */
+$link-color                 : #7aa2f7 !default;
+$link-color-hover           : #89b4fa !default;
+$link-color-visited         : #bb9af7 !default;
+$masthead-link-color        : #9ece6a !default;
+$masthead-link-color-hover  : #c0caf5 !default;
+
+/* code */
+$code-background-color      : #24283b !default;
+$code-background-color-dark : #1a1b26 !default;
+
+/* syntax highlighting - Tokyo Night */
+$base00: #1a1b26 !default;
+$base01: #24283b !default;
+$base02: #2a2e42 !default;
+$base03: #565f89 !default;
+$base04: #a9b1d6 !default;
+$base05: #c0caf5 !default;
+$base06: #c0caf5 !default;
+$base07: #c0caf5 !default;
+$base08: #f7768e !default;
+$base09: #ff9e64 !default;
+$base0a: #e0af68 !default;
+$base0b: #9ece6a !default;
+$base0c: #7dcfff !default;
+$base0d: #7aa2f7 !default;
+$base0e: #bb9af7 !default;
+$base0f: #f7768e !default;
+
+/* notices */
+$notice-background-mix: 20% !default;
+$code-notice-background-mix: 15% !default;
+
+$focus-color                : $primary-color !default;
+$active-color               : mix($background-color, $primary-color, 40%) !default;
+$navicon-link-color-hover   : mix(#fff, $primary-color, 25%) !default;
+
+/* font override */
+$global-font-family         : 'Fira Code', Monaco, Consolas, monospace !default;
+$header-font-family         : 'Fira Code', Monaco, Consolas, monospace !default;
+$caption-font-family        : 'Fira Code', Monaco, Consolas, monospace !default;
+$monospace                  : 'Fira Code', Monaco, Consolas, monospace !default;

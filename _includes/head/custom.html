@@ -1,5 +1,54 @@
-<!-- start custom head snippets -->
+<!-- Terminal Theme: Fira Code font (optimized weights) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
-<!-- end custom head snippets -->
+<!-- Code copy button -->
+<style>
+.code-copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #2a2e42;
+  color: #565f89;
+  border: 1px solid #3b4261;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.code-copy-btn:hover { color: #c0caf5; background: #3b4261; }
+div.highlight:hover .code-copy-btn,
+figure.highlight:hover .code-copy-btn { opacity: 1; }
+.code-copy-btn.copied { color: #9ece6a; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('div.highlight, figure.highlight').forEach(function(block) {
+    block.style.position = 'relative';
+    var btn = document.createElement('button');
+    btn.className = 'code-copy-btn';
+    btn.textContent = 'copy';
+    btn.addEventListener('click', function() {
+      var code = block.querySelector('code');
+      if (code) {
+        navigator.clipboard.writeText(code.textContent).then(function() {
+          btn.textContent = 'copied!';
+          btn.classList.add('copied');
+          setTimeout(function() {
+            btn.textContent = 'copy';
+            btn.classList.remove('copied');
+          }, 2000);
+        });
+      }
+    });
+    block.appendChild(btn);
+  });
+});
+</script>

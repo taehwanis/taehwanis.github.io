@@ -1,18 +1,10 @@
 # main links
 main:
-  - title: "TISTORY"
-    url: https://taehwanis.tistory.com/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
-  # - title: "Introduce"
-  #   url: /about/
-  # - title: "Category"
-  #   url: "/categories/"
-  # - title: "Tags"
-  #   url: /tags/
+  - title: "~ home"
+    url: /
+  - title: "# tags"
+    url: /tags/
+  - title: "@ categories"
+    url: /categories/
+  - title: "? about"
+    url: /about/
