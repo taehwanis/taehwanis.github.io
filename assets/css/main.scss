@@ -86,19 +86,53 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-.sidebar.sidebar--collapsed {
-  display: none !important;
+/* Sidebar overlay mode */
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: #16161e;
+  border-right: 1px solid #2a2e42;
+  z-index: 50;
+  padding: 80px 20px 20px;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: transform 0.25s ease;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* When sidebar is hidden, content takes full width */
-#main.sidebar-hidden {
-  .archive {
-    float: none !important;
-    width: 100% !important;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px !important;
-  }
+.sidebar.sidebar--collapsed {
+  transform: translateX(-100%) !important;
+}
+
+/* Content always full width */
+#main .archive {
+  float: none !important;
+  width: 100% !important;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px !important;
+}
+
+/* Overlay backdrop */
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 49;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.sidebar-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .terminal-dot {
